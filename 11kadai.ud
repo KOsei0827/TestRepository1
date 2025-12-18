@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+actor 生徒 as g
+actor 教師 as c
+
+package エルキャンパス {
+  usecase "資料ダウンロード" as UC1
+  usecase "アンケート回答" as UC2
+  usecase "お知らせ閲覧" as UC3
+  usecase "カレンダー閲覧" as UC4
+  usecase "課題提出" as UC5
+}
+
+package ユニバーサルパスポート {
+  usecase "履修登録" as UC6
+  usecase "時間割確認" as UC7
+  usecase "シラバス" as UC8
+  usecase "教師時間割" as UC9
+}
+g --> UC1
+g --> UC2
+g --> UC3
+g --> UC5
+g --> UC6
+g --> UC7
+g --> UC8
+g --> UC9
+c --> UC1
+c --> UC4
+c --> UC3
+c --> UC7
+c --> UC8
+c --> UC9
+
+@enduml
