@@ -1,0 +1,9 @@
+@startuml
+participant Client as a
+participant Server as a1
+database DB as a2
+a -> a1 :データを要求
+a1 -> a2 :問い合わせ
+a1 <-- a2 :結果
+a <-- a1 :データ
+@enduml
